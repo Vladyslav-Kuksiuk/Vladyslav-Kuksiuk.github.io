@@ -11,12 +11,9 @@
             margin: 0;
             padding: 0;
             background-color: #f8d7da;
-            overflow: hidden;
         }
         h1 {
             margin-top: 50px;
-            font-size: 36px;
-            color: #ff6f61;
         }
         button {
             font-size: 20px;
@@ -45,51 +42,17 @@
         .increased {
             font-size: 30px;
         }
-        .heart {
-            position: absolute;
-            top: 10%;
-            left: 50%;
-            transform: translateX(-50%);
-            font-size: 100px;
-            color: red;
-            animation: heart-animation 1.5s infinite;
-        }
-        @keyframes heart-animation {
-            0% { transform: translateX(-50%) scale(1); opacity: 1; }
-            50% { transform: translateX(-50%) scale(1.5); opacity: 0.6; }
-            100% { transform: translateX(-50%) scale(1); opacity: 1; }
-        }
-        .gif-container {
-            margin-top: 20px;
-        }
-        .gif-container img {
-            width: 150px;
-            height: auto;
-            animation: gif-animation 5s infinite;
-        }
-        @keyframes gif-animation {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
-        }
     </style>
 </head>
 <body>
     <h1>Ты будешь моей Валентинкой?</h1>
+    <img src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExdnVmaDd3dXprY2tpdWdiM2p0cHJwb3c2bGtob2VnMDNuZnhidmU2YyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/xZn6QSIyPKNpaTbGa2/giphy.gif" alt="description of gif">
     <div class="buttons">
         <button class="yes-button" onclick="redirectToPage()">Да</button>
         <button class="no-button" onclick="increaseSize()">Нет</button>
     </div>
 
     <div id="message" class="message"></div>
-
-    <!-- Милые гифки -->
-    <div class="gif-container">
-        <img src="https://media.giphy.com/media/1HgbF7Fw7n3gY/giphy.gif" alt="Gif" />
-        <img src="https://media.giphy.com/media/Lzgd1HL9dbqP2/giphy.gif" alt="Gif" />
-    </div>
-
-    <!-- Сердечко -->
-    <div class="heart">❤️</div>
 
     <script>
         let size = 20;
