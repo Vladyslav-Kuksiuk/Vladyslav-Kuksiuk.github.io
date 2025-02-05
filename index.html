@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ты будешь моей Валентинкой?</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: pink;
+        }
+        h1 {
+            font-size: 2em;
+        }
+        button {
+            margin: 10px;
+            padding: 10px 20px;
+            font-size: 1.2em;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        #yes {
+            background-color: lightgreen;
+        }
+        #no {
+            background-color: lightcoral;
+        }
+    </style>
+</head>
+<body>
+    <h1>Ты будешь моей Валентинкой?</h1>
+    <button id="yes">Да</button>
+    <button id="no">Нет</button>
+
+    <script>
+        let yesButton = document.getElementById('yes');
+        let noButton = document.getElementById('no');
+        let size = 1;
+
+        yesButton.addEventListener('click', function() {
+            window.location.href = 'yes.html';
+        });
+
+        noButton.addEventListener('click', function() {
+            size += 0.3;
+            yesButton.style.transform = `scale(${size})`;
+        });
+    </script>
+</body>
+</html>
